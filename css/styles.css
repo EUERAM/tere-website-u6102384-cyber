@@ -1,0 +1,173 @@
+/* VARIABLES AND STYLES */
+:root {
+  --white: rgba(255, 255, 255, 1);
+  --green: rgba(117, 191, 122, 1);
+  --black: rgba(0, 0, 0, 1);
+  --light-gray: rgba(158, 157, 162, 1);
+  --gray: rgba(139, 139, 165, 1);
+  --dark-gray: rgba(39, 32, 66, 1);
+  --background: rgba(249, 249, 249, 1);
+}
+h1 {
+  font-size: 64px;
+  font-family: Inter;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 65.91px;
+  text-decoration: none;
+  text-transform: none;
+}
+p {
+  font-size: 18px;
+  font-family: Inter;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 26px;
+  text-decoration: none;
+  text-transform: none;
+  margin: 0;
+}
+.description {
+  font-size: 24px;
+  font-family: Inter;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 33px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--light-gray);
+}
+.button {
+  font-size: 24px;
+  font-family: Inter;
+  font-weight: 700;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+h2 {
+  font-size: 47px;
+  font-family: Inter;
+  font-weight: 900;
+  font-style: normal;
+  line-height: 50.35px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+}
+h3 {
+  font-size: 22px;
+  font-family: Inter;
+  font-weight: 800;
+  font-style: normal;
+  line-height: 50.35px;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 0;
+}
+.small-button {
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 700;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+.small {
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+/* HEADER */
+header {
+  padding-top: 80px;
+}
+.container {
+  width: 1280px;
+  margin: auto; /* place div in the center */
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.menu ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  /* gap: 20px; */
+}
+.menu a {
+  color: var(--Dark-gray, #272042);
+  /* Normal */
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px; /* 144.444% */
+  padding: 10px 30px;
+  text-decoration: none; /* get rid of underline */
+  transition: all 0.3s;
+}
+.menu a:hover {
+  color: #75bf7a;
+}
+.menu .btn-help {
+  border-radius: 5px;
+  background: var(--Green, #75bf7a);
+  color: white;
+}
+.menu .btn-help:hover {
+  color: white;
+  background-color: black;
+}
+
+/* HOW IT WORKS */
+
+.how-it-works {
+  padding-top: 80px;
+}
+.how-it-works .step {
+  margin-bottom: 50px;
+}
+.how-it-works .description {
+  text-align: center;
+  width: 620px;
+  margin: auto;
+}
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 60px;
+}
+.how-it-works .number {
+  background-image: url("../img/step.png");
+  width: 62px;
+  height: 62px;
+  /* text styles */
+  color: #75bf7a;
+  text-align: center;
+  font-family: Inter;
+  font-size: 34.108px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 37.019px; /* 108.537% */
+  /* to get number into the center */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.green {
+  color: var(--green);
+}
+.text-right {
+  text-align: right;
+}
+.text-right .number {
+  margin-left: auto;
+}
