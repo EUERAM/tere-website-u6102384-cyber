@@ -9,13 +9,13 @@
   --background: rgba(249, 249, 249, 1);
 }
 h1 {
-  font-size: 64px;
+  color: var(--Black, #000);
+  /* Big title */
   font-family: Inter;
-  font-weight: 700;
+  font-size: 64px;
   font-style: normal;
-  line-height: 65.91px;
-  text-decoration: none;
-  text-transform: none;
+  font-weight: 700;
+  line-height: 65.91px; /* 102.985% */
 }
 p {
   font-size: 18px;
@@ -127,6 +127,191 @@ header {
 
 /* HOW IT WORKS */
 
+/* HERO */
+.hero {
+  padding-top: 80px;
+  padding-bottom: 45px; /* adjusted so gap to next section is 90px total */
+}
+
+.hero-inner {
+  display: flex;
+  gap: 40px;
+  align-items: stretch; /* make children (hero-left / hero-right) stretch full height */
+}
+
+.hero-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* align children to the start (left) */
+  justify-content: space-between; /* distribute children from top to bottom */
+  height: 100%;
+}
+
+.hero-sub {
+  color: var(--dark-gray);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.hero-left .description {
+  width: 550px;
+  height: 120px;
+  flex-shrink: 0;
+}
+
+.hero-buttons {
+  margin-top: 24px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.store-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 30px;
+  background-color: var(--black);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 700;
+  white-space: nowrap; /* prevent wrapping */
+}
+
+.store-icon-wrapper {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.store-text {
+  width: 75%;
+  text-transform: uppercase;
+  display: block;
+  text-align: left;
+  font-weight: 700;
+  font-family: Inter;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.store-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.store-icon-wrapper img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.hero-img {
+  max-width: 100%;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .hero-inner {
+    flex-direction: column;
+  }
+  .hero-left,
+  .hero-right {
+    width: 100%;
+    text-align: center;
+  }
+  .hero-left h1 {
+    font-size: 36px;
+  }
+  .hero-buttons {
+    justify-content: center;
+  }
+  .hero-right {
+    flex-direction: row;
+    gap: 12px;
+  }
+  .hero-img {
+    width: 45%;
+  }
+}
+
+.link {
+  padding-top: 45px; /* adjusted so gap from previous section is 90px total */
+  padding-bottom: 80px;
+}
+
+.link-box {
+  background-color: var(--green);
+  border-radius: 15px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  padding: 40px;
+}
+
+.link-content {
+  width: 25%;
+}
+
+.link-content .description {
+  color: var(--white);
+  margin: 0;
+}
+
+.link-form {
+  width: 75%;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.link-form input {
+  flex: 1; /* fill remaining space but allow shrinking */
+  min-width: 0; /* allow flex children to shrink properly */
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-family: Inter;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.link-form input::placeholder {
+  color: var(--light-gray);
+}
+
+.btn-submit {
+  padding: 12px 30px;
+  background-color: var(--black);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 700;
+  transition: all 0.3s;
+  white-space: nowrap; /* keep button text on a single line */
+  flex-shrink: 0; /* prevent button from shrinking and causing wrap */
+}
+
+.btn-submit:hover {
+  background-color: var(--dark-gray);
+}
+
 .how-it-works {
   padding-top: 80px;
 }
@@ -171,3 +356,35 @@ header {
 .text-right .number {
   margin-left: auto;
 }
+
+/* BENEFITS SECTION */
+.benefits {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.benefits-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.benefit-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.benefit-col h3 {
+  font-size: 22px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 0 16px 0;
+}
+
+.benefit-col p {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--dark-gray);
+}
+
