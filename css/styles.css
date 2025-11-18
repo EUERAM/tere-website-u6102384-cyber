@@ -388,3 +388,149 @@ header {
   color: var(--dark-gray);
 }
 
+/* Specific styles for the new benefits markup */
+.benefit .number {
+  color: #75bf7a;
+  font-family: Inter;
+  font-size: 88px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 118.8px; /* 135% */
+}
+
+.benefit .text h2 {
+  color: #000;
+  font-family: Inter;
+  font-size: 33.943px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32.5px; /* 95.749% */
+  margin: 0 0 8px 0;
+}
+
+.benefit .illustration {
+  max-width: 100%;
+  height: auto;
+  margin-top: 16px;
+}
+
+/* Grid wrapper used in the new benefits markup */
+.benefits h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* Use CSS Grid for each benefit: number + title on the first row; paragraph spans below them; image on the far side */
+.benefit {
+  display: grid;
+  grid-template-columns: 393px 256.789px; /* frame (number/title/desc) / image */
+  grid-template-rows: auto;
+  gap: 0 28px;
+  align-items: start;
+}
+
+/* even items: swap image and number columns */
+.grid .benefit:nth-child(even) {
+  grid-template-areas:
+    "image title number"
+    "image desc desc";
+}
+
+.benefit .number {
+  grid-area: number;
+  color: #75bf7a;
+  font-family: Inter;
+  font-size: 88px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 118.8px; /* 135% */
+  display: flex;
+  align-items: flex-start;
+}
+
+.benefit .title {
+  grid-area: title;
+  color: #000;
+  font-family: Inter;
+  font-size: 33.943px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32.5px; /* 95.749% */
+  margin: 0;
+  max-height: 65px;
+  overflow: hidden;
+}
+
+.benefit .desc {
+  grid-area: desc;
+  max-width: 393px;
+  margin: 0;
+}
+
+.benefit .illustration {
+  grid-area: image;
+  display: flex;
+  width: 256.789px;
+  height: 254.82px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  object-fit: contain; /* keep image aspect */
+  justify-self: end;
+}
+
+/* frame holds number, title and desc stacked */
+.benefit .frame {
+  display: flex;
+  width: 393px;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+
+/* Titles align left for odd items (right of number), align right for even items (left of number) */
+.grid .benefit:nth-child(odd) .title {
+  text-align: left;
+}
+.grid .benefit:nth-child(even) .title {
+  text-align: right;
+}
+
+/* FOOTER */
+footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.footer-inner {
+  width: 1440px;
+  height: 553px;
+  margin: 0 auto;
+  padding-left: 128px;
+  padding-right: 128px;
+  display: flex;
+  gap: 50px; /* space between the five columns */
+  align-items: flex-start;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.footer-col img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.footer-col-2,
+.footer-col-3 {
+  max-width: 392px; /* allow text columns to be readable */
+}
